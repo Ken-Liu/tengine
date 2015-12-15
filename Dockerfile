@@ -1,11 +1,9 @@
-FROM debian:jessie
+FROM debian:wheezy
 
 MAINTAINER liukunmcu "lkmcudevelope@gmail.com"
 
 WORKDIR /tengine
 ADD . /tengine
-RUN sed -i '$a deb http://ftp.de.debian.org/debian testing main non-free contrib' /etc/apt/sources.list
-RUN sed -i '$a deb http://archive.debian.org/debian-archive/debian sarge main contrib non-free' /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get -y -t install make gcc
 RUN sed '$d' -i /etc/apt/sources.list
