@@ -13,7 +13,7 @@ RUN make install
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /usr/local/nginx/logs/access.log
 RUN ln -sf /dev/stderr /usr/local/nginx/logs/error.log
-
+WORKDIR /usr/local/nginx/sbin
 VOLUME ["/var/cache/nginx"]
 
 EXPOSE 80 443
