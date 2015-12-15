@@ -5,9 +5,8 @@ MAINTAINER liukunmcu "lkmcudevelope@gmail.com"
 WORKDIR /tengine
 ADD . /tengine
 RUN apt-get update
-RUN apt-get -y -t install make gcc
-RUN sed '$d' -i /etc/apt/sources.list
-RUN sed '$d' -i /etc/apt/sources.list
+RUN apt-get -y -t install make
+RUN apt-get -y -t install gcc
 RUN ./configure
 RUN make
 RUN make install
