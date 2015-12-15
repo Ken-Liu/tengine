@@ -7,6 +7,7 @@ ADD . /tengine
 RUN apt-get update
 RUN apt-get -y  install make
 RUN apt-get -y  install gcc
+RUN apt-get install libpcre3 libpcre3-dev libpcrecpp0 libssl-dev zlib1g-dev
 RUN ./configure
 RUN make
 RUN make install
