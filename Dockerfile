@@ -2,8 +2,8 @@ FROM debian:jessie
 
 MAINTAINER liukunmcu "lkmcudevelope@gmail.com"
 
-WORKDIR /nginx
-ADD . /nginx
+WORKDIR /tengine
+ADD . /tengine
 RUN ./configure
 RUN make
 RUN make install
