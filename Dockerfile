@@ -11,8 +11,8 @@ RUN ./configure
 RUN make
 RUN make install
 # forward request and error logs to docker log collector
-RUN ln -sf /dev/stdout /var/log/nginx/access.log
-RUN ln -sf /dev/stderr /var/log/nginx/error.log
+RUN ln -sf /dev/stdout /usr/local/nginx/logs/access.log
+RUN ln -sf /dev/stderr /usr/local/nginx/logs/error.log
 
 VOLUME ["/var/cache/nginx"]
 
