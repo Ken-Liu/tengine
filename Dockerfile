@@ -5,8 +5,7 @@ MAINTAINER liukunmcu "lkmcudevelope@gmail.com"
 WORKDIR /tengine
 ADD . /tengine
 RUN apt-get update
-RUN apt-get -y  install make
-RUN apt-get -y  install gcc
+RUN apt-get -y install build-essential
 RUN apt-get -y install libpcre3 libpcre3-dev libpcrecpp0 libssl-dev zlib1g-dev
 RUN ./configure
 RUN make
